@@ -11,8 +11,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guru02.R
 
-class HomeActivity : AppCompatActivity(){
 
+class HomeActivity : AppCompatActivity() {
     var userID: String = "userID"
     lateinit var fname: String
     lateinit var str: String
@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.id.layout.activity_main)
+        setContentView(R.layout.home)
 
         // UI값 생성
         calendarView=findViewById(R.id.calendarView)
@@ -42,10 +42,10 @@ class HomeActivity : AppCompatActivity(){
             calendarTextView.visibility = View.VISIBLE
             contextEditText.visibility = View.VISIBLE
             diaryContent.visibility = View.INVISIBLE
+            plusBtn.visibility = View.VISIBLE
             calendarTextView.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
             contextEditText.setText("")
-            plusBtn.visibility = View.VISIBLE
-            checkDay(year, month, dayOfMonth, userID)
+            //checkDay(year, month, dayOfMonth, userID)
         }
 
     }
