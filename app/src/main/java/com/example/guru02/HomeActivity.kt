@@ -1,12 +1,7 @@
-import android.annotation.SuppressLint
-import java.io.FileInputStream
-import java.io.FileOutputStream
-
 import android.view.View
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CalendarView
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guru02.R
@@ -24,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home)
+        setContentView(R.layout.activity_home)
 
         // UI값 생성
         calendarView=findViewById(R.id.calendarView)
