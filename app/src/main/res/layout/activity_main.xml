@@ -19,6 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/AppTitle"
         app:layout_constraintVertical_bias="0.823" />
 
+
     <TextView
         android:id="@+id/AppTitle"
         android:layout_width="wrap_content"
@@ -29,6 +30,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.24" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="205dp"
+        android:layout_height="203dp"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="264dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
