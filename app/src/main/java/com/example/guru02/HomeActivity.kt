@@ -9,9 +9,10 @@ import android.widget.CalendarView
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.guru02.R
 
-class HomeActivity : AppCompatActivity(){
 
+class HomeActivity : AppCompatActivity() {
     var userID: String = "userID"
     lateinit var fname: String
     lateinit var str: String
@@ -19,7 +20,7 @@ class HomeActivity : AppCompatActivity(){
     lateinit var updateBtn: Button
     lateinit var deleteBtn:Button
     lateinit var saveBtn:Button
-    lateinit var diaryTextView: TextView
+    lateinit var calendarTextView: TextView
     lateinit var diaryContent:TextView
     lateinit var title:TextView
     lateinit var contextEditText: EditText
@@ -27,14 +28,11 @@ class HomeActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.id.layout.activity_main)
+        setContentView(R.layout.home)
 
         // UI값 생성
         calendarView=findViewById(R.id.calendarView)
-        diaryTextView=findViewById(R.id.diaryTextView)
-        saveBtn=findViewById(R.id.saveBtn)
-        deleteBtn=findViewById(R.id.deleteBtn)
-        updateBtn=findViewById(R.id.updateBtn)
+        calendarTextView=findViewById(R.id.calendarTextView)
         diaryContent=findViewById(R.id.diaryContent)
         title=findViewById(R.id.title)
         contextEditText=findViewById(R.id.contextEditText)
@@ -42,19 +40,19 @@ class HomeActivity : AppCompatActivity(){
         title.text = "달력 일기장"
 
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
-            diaryTextView.visibility = View.VISIBLE
+            calendarTextView.visibility = View.VISIBLE
             saveBtn.visibility = View.VISIBLE
             contextEditText.visibility = View.VISIBLE
             diaryContent.visibility = View.INVISIBLE
             updateBtn.visibility = View.INVISIBLE
             deleteBtn.visibility = View.INVISIBLE
-            diaryTextView.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
+            calendarTextView.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
             contextEditText.setText("")
-            checkDay(year, month, dayOfMonth, userID)
+            //checkDay(year, month, dayOfMonth, userID)
         }
 
         saveBtn.setOnClickListener {
-            saveDiary(fname)
+            //saveDiary(fname)
             contextEditText.visibility = View.INVISIBLE
             saveBtn.visibility = View.INVISIBLE
             updateBtn.visibility = View.VISIBLE
@@ -64,7 +62,5 @@ class HomeActivity : AppCompatActivity(){
             diaryContent.visibility = View.VISIBLE
         }
     }
-
-
 
 }
