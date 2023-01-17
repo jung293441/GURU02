@@ -18,9 +18,7 @@ class HomeActivity : AppCompatActivity() {
     lateinit var str: String
     lateinit var calendarView: CalendarView
     lateinit var calendarTextView: TextView
-    lateinit var diaryContent:TextView
     lateinit var title:TextView
-    lateinit var contextEditText: EditText
     lateinit var plusBtn : Button
 
 
@@ -31,20 +29,15 @@ class HomeActivity : AppCompatActivity() {
         // UI값 생성
         calendarView=findViewById(R.id.calendarView)
         calendarTextView=findViewById(R.id.calendarTextView)
-        diaryContent=findViewById(R.id.diaryContent)
         title=findViewById(R.id.title)
-        contextEditText=findViewById(R.id.contextEditText)
         plusBtn = findViewById(R.id.plusBtn)
 
         title.text = "달력 일기장"
 
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             calendarTextView.visibility = View.VISIBLE
-            contextEditText.visibility = View.VISIBLE
-            diaryContent.visibility = View.INVISIBLE
             plusBtn.visibility = View.VISIBLE
             calendarTextView.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
-            contextEditText.setText("")
             //checkDay(year, month, dayOfMonth, userID)
         }
 
