@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.id.layout.activity_main)
 
         // UI값 생성
         calendarView=findViewById(R.id.calendarView)
