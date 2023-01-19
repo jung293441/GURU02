@@ -18,8 +18,10 @@ class ToDoList : AppCompatActivity() {
     private lateinit var changeBtn: Button
     private lateinit var deleteBtn: Button
     private lateinit var completeBtn: Button
+    private lateinit var cancelBtn: Button
 
     var isCompl: Boolean = false
+    var isCancel: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +40,7 @@ class ToDoList : AppCompatActivity() {
         changeBtn = findViewById(R.id.changeBtn)
         deleteBtn = findViewById(R.id.deleteBtn)
         completeBtn = findViewById(R.id.completeBtn)
+        cancelBtn = findViewById(R.id.cancelBtn)
 
         //Adapter 적용
         listView.adapter = adapter
@@ -91,6 +94,18 @@ class ToDoList : AppCompatActivity() {
             }
         }
 
+        //완료 취소 버튼 이벤트
+        cancelBtn.setOnClickListener {
+
+            isCancel = !isCancel
+
+            if(isCancel)
+            {
+                Toast.makeText(this, "완료된 항목을 클릭하여 취소할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "취소하기를 그만두려면 버튼을 한번 더 눌러주세요.", Toast.LENGTH_LONG).show()
+            }
+        }
+
         listView.setOnItemClickListener { adapterView, view, i, l ->
             val textView: TextView = view as TextView
 
@@ -100,6 +115,13 @@ class ToDoList : AppCompatActivity() {
                 // 선택 초기화
                 listView.clearChoices()
             }
+            if(isCancel)
+            {
+                textView.paintFlags = textView.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+                // 선택 초기화
+                listView.clearChoices()
+            }
+
         }
 
 

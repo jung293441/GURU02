@@ -109,6 +109,18 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="540dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="취소하기"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
 
