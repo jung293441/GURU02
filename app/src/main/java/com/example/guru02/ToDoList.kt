@@ -1,23 +1,21 @@
 package com.example.guru02
 
 import android.content.Intent
-import android.graphics.Paint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import android.widget.AdapterView.OnItemClickListener
+import androidx.appcompat.app.AppCompatActivity
+
 
 class ToDoList : AppCompatActivity() {
 
     private lateinit var todoList: ArrayList<String>
     private lateinit var adapter: ArrayAdapter<String>
     private lateinit var todoEdit: EditText
+    private lateinit var changeBtn: Button
+    private lateinit var deleteBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +31,13 @@ class ToDoList : AppCompatActivity() {
         val listView: ListView = findViewById(R.id.list_view)
         val addBtn: Button = findViewById(R.id.add_btn)
         todoEdit = findViewById(R.id.todo_edit)
+        changeBtn = findViewById(R.id.changeBtn)
+        deleteBtn = findViewById(R.id.deleteBtn)
 
         //Adapter 적용
         listView.adapter = adapter
+
+        listView.choiceMode = ListView.CHOICE_MODE_SINGLE
 
         //버튼 이벤트
         addBtn.setOnClickListener {
@@ -43,14 +45,18 @@ class ToDoList : AppCompatActivity() {
             addItem()
         }
 
-        //리스트 아이템 클릭 이벤트
-        /*listView.setOnItemClickListener { adapterView, view, i, l ->
+        deleteBtn.setOnClickListener {
 
-            val textView: TextView = view as TextView
+            val checked = listView.checkedItemPosition
 
-            //취소선 넣기
-            textView.paintFlags = textView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-        }*/
+            if(checked >=0 && checked < adapter.count){
+                todoList.removeAt(checked)
+                adapter.notifyDataSetChanged()
+            }
+
+            // 선택 초기화
+            listView.clearChoices()
+        }
 
     } //onCreate
 
@@ -69,6 +75,10 @@ class ToDoList : AppCompatActivity() {
         } else {
             Toast.makeText(this, "할 일을 적어주세요", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun deleteItem(){
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
