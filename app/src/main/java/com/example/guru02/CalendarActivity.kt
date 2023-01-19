@@ -34,7 +34,7 @@ class CalendarActivity : AppCompatActivity() {
             plusBtn = findViewById(R.id.plusBtn)
             editTextMemo = findViewById(R.id.editTextMemo)
 
-            title.text = "달력 일기장"
+            title.text = "할 일 했슈?"
 
             calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
                 calendarTextView.visibility = View.VISIBLE
