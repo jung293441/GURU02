@@ -13,9 +13,6 @@ import android.widget.TextView
 import org.w3c.dom.Text
 
 class CalendarActivity : AppCompatActivity() {
-        var userID: String = "userID"
-        lateinit var fname: String
-        lateinit var str: String
         lateinit var calendarView: CalendarView
         lateinit var calendarTextView: TextView
         lateinit var plusBtn : Button
