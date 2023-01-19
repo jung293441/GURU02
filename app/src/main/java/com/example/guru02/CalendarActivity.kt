@@ -18,7 +18,6 @@ class CalendarActivity : AppCompatActivity() {
         lateinit var str: String
         lateinit var calendarView: CalendarView
         lateinit var calendarTextView: TextView
-        lateinit var title: TextView
         lateinit var plusBtn : Button
         lateinit var editTextMemo : EditText
 
@@ -31,11 +30,9 @@ class CalendarActivity : AppCompatActivity() {
             // UI값 생성
             calendarView=findViewById(R.id.calendarView)
             calendarTextView=findViewById(R.id.calendarTextView)
-            title=findViewById(R.id.title)
             plusBtn = findViewById(R.id.plusBtn)
             editTextMemo = findViewById(R.id.editTextMemo)
 
-            title.text = "할 일 했슈?"
 
             calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
                 calendarTextView.visibility = View.VISIBLE
