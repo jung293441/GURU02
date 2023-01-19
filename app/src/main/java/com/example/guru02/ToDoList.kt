@@ -19,6 +19,8 @@ class ToDoList : AppCompatActivity() {
     private lateinit var deleteBtn: Button
     private lateinit var completeBtn: Button
 
+    var isCompl: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_to_do_list)
@@ -80,14 +82,27 @@ class ToDoList : AppCompatActivity() {
         //완료 버튼 이벤트
         completeBtn.setOnClickListener {
 
-            val checked = listView.checkedItemPosition
+            isCompl = !isCompl
 
-            if(checked >=0 && checked < adapter.count){
-                val string:String = todoList.get(checked)
-
+            if(isCompl)
+            {
+                Toast.makeText(this, "항목을 클릭하여 완료할 수 있습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "완료하기를 그만두려면 버튼을 한번 더 눌러주세요.", Toast.LENGTH_LONG).show()
             }
-
         }
+
+        listView.setOnItemClickListener { adapterView, view, i, l ->
+            val textView: TextView = view as TextView
+
+            if(isCompl)
+            {
+                textView.paintFlags = textView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                // 선택 초기화
+                listView.clearChoices()
+            }
+        }
+
+
 
     } //onCreate
 
