@@ -16,7 +16,7 @@
         android:layout_marginEnd="25dp"
         app:layout_constraintBottom_toTopOf="@+id/calendarTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,17 +30,17 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/editTextMemo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     <Button
         android:id="@+id/plusBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ca9978"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#A36B2B"
         android:text="할 일 추가하기"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +48,8 @@
 
     <EditText
         android:id="@+id/editTextMemo"
-        android:layout_width="386dp"
-        android:layout_height="155dp"
+        android:layout_width="399dp"
+        android:layout_height="189dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
@@ -59,7 +59,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/plusBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarTextView"
         tools:ignore="SpeakableTextPresentCheck" />
