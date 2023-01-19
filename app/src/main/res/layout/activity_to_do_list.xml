@@ -51,22 +51,6 @@
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
-    <!-- 리스트 화면 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_above="@id/bottom_section"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="#eee">
-
-        <ListView
-            android:id="@+id/list_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:focusableInTouchMode="true"/>
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -78,7 +62,7 @@
             android:id="@+id/changeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="수정하기"
@@ -90,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="삭제하기"
@@ -102,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="완료하기"
@@ -114,13 +98,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="취소하기"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
+    </LinearLayout>
+
+    <!-- 리스트 화면 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_above="@id/bottom_section"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:background="#eee">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:focusableInTouchMode="true" />
     </LinearLayout>
 
 
