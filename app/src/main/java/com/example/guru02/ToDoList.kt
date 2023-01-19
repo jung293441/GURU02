@@ -27,7 +27,7 @@ class ToDoList : AppCompatActivity() {
         todoList = ArrayList()
 
         //ArrayAdapter 초기화(context, layout, list)
-        adapter = ArrayAdapter(this, R.layout.list_item, todoList)
+        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_single_choice, todoList)
 
         //UI객체 생성
         val listView: ListView = findViewById(R.id.list_view)
@@ -44,13 +44,13 @@ class ToDoList : AppCompatActivity() {
         }
 
         //리스트 아이템 클릭 이벤트
-        listView.setOnItemClickListener { adapterView, view, i, l ->
+        /*listView.setOnItemClickListener { adapterView, view, i, l ->
 
             val textView: TextView = view as TextView
 
             //취소선 넣기
             textView.paintFlags = textView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-        }
+        }*/
 
     } //onCreate
 
