@@ -91,6 +91,16 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/completeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="540dp"
+            android:text="완료하기"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
 
