@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="할 일을 터치하면 완료할 수 있습니다."
+            android:text="날짜 변경은 오른쪽 상단 버튼을 누르세요"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
