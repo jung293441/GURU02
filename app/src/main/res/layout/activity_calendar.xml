@@ -9,7 +9,7 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="361dp"
+        android:layout_width="410dp"
         android:layout_height="332dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="16dp"
@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/calendarTextView"
@@ -75,7 +76,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="메모 저장" />
+            android:text="메모 저장"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>
