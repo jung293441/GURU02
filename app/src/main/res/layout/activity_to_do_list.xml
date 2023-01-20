@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:padding="10dp"  >
+        android:padding="10dp">
 
         <EditText
             android:id="@+id/todo_edit"
@@ -56,13 +56,14 @@
         android:layout_height="match_parent"
         android:gravity="left"
         android:orientation="horizontal"
-        android:paddingLeft="10dp">
+        android:paddingLeft="7dp">
 
         <Button
             android:id="@+id/changeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:backgroundTint="#B58E63"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="수정하기"
@@ -75,6 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
+            android:backgroundTint="#B58E63"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="삭제하기"
@@ -87,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
+            android:backgroundTint="#B58E63"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="완료하기"
@@ -99,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
+            android:backgroundTint="#B58E63"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="취소하기"
@@ -111,15 +115,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_above="@id/bottom_section"
+        android:layout_above="@+id/bottom_section"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="30dp"
-        android:background="#eee">
+        android:background="#FAF2E4">
 
         <ListView
             android:id="@+id/list_view"
             android:layout_width="match_parent"
             android:layout_height="500dp"
+            android:backgroundTint="#684302"
             android:focusableInTouchMode="true" />
     </LinearLayout>
 
