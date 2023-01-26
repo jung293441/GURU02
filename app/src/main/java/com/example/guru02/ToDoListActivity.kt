@@ -5,12 +5,11 @@ import android.graphics.Paint
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 
-class ToDoList : AppCompatActivity() {
+class ToDoListActivity : AppCompatActivity() {
 
     private lateinit var todoList: ArrayList<String>
     private lateinit var adapter: ArrayAdapter<String>

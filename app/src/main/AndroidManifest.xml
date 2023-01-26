@@ -16,7 +16,7 @@
             android:name=".CalendarActivity"
             android:exported="false" />
         <activity
-            android:name=".ToDoList"
+            android:name=".ToDoListActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
