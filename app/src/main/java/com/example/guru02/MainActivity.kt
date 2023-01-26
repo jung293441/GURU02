@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //시작하기 버튼 눌렀을 시
         val intent = Intent(this, CalendarActivity::class.java)
         var StartButton = findViewById<Button>(R.id.StartButton)
 

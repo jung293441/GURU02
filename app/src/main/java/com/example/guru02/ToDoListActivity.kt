@@ -55,14 +55,12 @@ class ToDoListActivity : AppCompatActivity() {
         changeBtn.setOnClickListener {
             //입력값 변수에 담기
             val todoStr: String = todoEdit.text.toString()
-
             val checked = listView.checkedItemPosition
 
             if(checked >=0 && checked < adapter.count){
                 todoList[checked] = todoStr
                 adapter.notifyDataSetChanged()
             }
-
             // 선택 초기화
             listView.clearChoices()
         }
@@ -76,7 +74,6 @@ class ToDoListActivity : AppCompatActivity() {
                 todoList.removeAt(checked)
                 adapter.notifyDataSetChanged()
             }
-
             // 선택 초기화
             listView.clearChoices()
         }
@@ -120,12 +117,9 @@ class ToDoListActivity : AppCompatActivity() {
                 // 선택 초기화
                 listView.clearChoices()
             }
-
         }
-
-
-
     } //onCreate
+
 
     private fun addItem(){
 
@@ -156,10 +150,7 @@ class ToDoListActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-
         }
-
         return super.onOptionsItemSelected(item)
     }
-
 }

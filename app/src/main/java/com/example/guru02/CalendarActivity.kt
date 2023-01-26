@@ -31,16 +31,14 @@ class CalendarActivity : AppCompatActivity() {
         editTextMemo = findViewById(R.id.editTextMemo)
         editMemoButtion = findViewById(R.id.editMemoButtion)
 
-        loadData()
-
-
+        // 캘린더뷰
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             calendarTextView.visibility = View.VISIBLE
             plusBtn.visibility = View.VISIBLE
             calendarTextView.text = String.format("%d / %d / %d", year, month + 1, dayOfMonth)
-            //checkDay(year, month, dayOfMonth, userID)
         }
 
+        //할일 추가하기 버튼 눌렀을 시
         val intent = Intent(this, ToDoListActivity::class.java)
         var plusBtn = findViewById<Button>(R.id.plusBtn)
 
@@ -49,6 +47,7 @@ class CalendarActivity : AppCompatActivity() {
 
         }
 
+        //오늘의 메모 버튼 눌렀을 시
         editMemoButtion.setOnClickListener{
             saveData(editTextMemo.text.toString())
             var intent = Intent(this, CalendarActivity::class.java)
@@ -56,7 +55,10 @@ class CalendarActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        loadData()
     }
+
+    //오늘의 메모
     private fun saveData(memo:String){
         var pref = this.getPreferences(0)
         var editor = pref.edit()
@@ -64,6 +66,7 @@ class CalendarActivity : AppCompatActivity() {
         editor.putString("KEY_NAME", editTextMemo.text.toString()).apply()
 
     }
+    //오늘의 메모
     private fun loadData(){
         var pref = this.getPreferences(0)
         var name = pref.getString("KEY_NAME", "")
